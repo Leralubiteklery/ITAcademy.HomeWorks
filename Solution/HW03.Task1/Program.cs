@@ -17,7 +17,7 @@ namespace HW03.Task1
             byte num6 = (byte)num5;
 
 
-            //b. нявное преобразование
+            //b. неявное преобразование
             byte num7 = 10;
             ushort num8 = num7;
 
