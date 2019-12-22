@@ -27,8 +27,6 @@ namespace HW._06_Task_1
                 Console.WriteLine(array3[i]);
             } 
             Console.ReadLine();
-
-            
         }
     }
 }
