@@ -18,17 +18,25 @@ namespace HW._06_Task_2
             }
             Console.WriteLine();
 
-            array.SetValue(array.GetValue(0), 3);
-
-            /*int[] array2 = new int[5];
-            Array.Copy(array, 3, array2, 3, array.Length);
+            int[] array2 = new int[5];
 
             for(int i = 0; i < array2.Length; i++)
             {
-                Console.WriteLine(array2[i]);*/
+                if (i < 3)
+                {
+                    array2[i] = array[i];
+                }
+                if(i == 3)
+                {
+                    array2.SetValue(array.GetValue(0), 3);
+                }
+                if(i > 3)
+                {
+                    array2[i] = array[i - 1];
+                }
+                Console.WriteLine(array2[i]);
             }
             Console.ReadLine();
-
         }
     }
 }
