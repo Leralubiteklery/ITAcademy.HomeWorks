@@ -12,20 +12,21 @@ namespace HW._07_Task_2
 
             //SubTask1(stringArray);
             //SubTask2(stringArray);
-            SubTask3(stringArray);
+            //SubTask3(stringArray);
+            SubTask4(stringArray);
 
             Console.ReadLine();
 
         }
 
-        static void SubTask1 (string[] str)
+        static void SubTask1(string[] str)
         {
             int maxLength = int.MinValue;
             int index = new int();
 
             for (int i = 0; i < str.Length; i++)
             {
-                if(maxLength < str[i].Length)
+                if (maxLength < str[i].Length)
                 {
                     maxLength = str[i].Length;
                     index = i;
@@ -40,15 +41,15 @@ namespace HW._07_Task_2
             int indexMax = new int();
             int minLength = int.MaxValue;
             int indexMin = new int();
-            
-            for(int i = 0; i < str.Length; i++)
+
+            for (int i = 0; i < str.Length; i++)
             {
-                if( maxLength < str[i].Length)
+                if (maxLength < str[i].Length)
                 {
                     maxLength = str[i].Length;
                     indexMax = i;
                 }
-                else if(minLength > str[i].Length)
+                else if (minLength > str[i].Length)
                 {
                     minLength = str[i].Length;
                     indexMin = i;
@@ -66,5 +67,17 @@ namespace HW._07_Task_2
             int strLength = str2.Length;
             Console.WriteLine("String length is: " + strLength);
         }
+
+        static void SubTask4(string[] str)
+        {
+            //string[] stringArray = enteredString.Split(' ');
+           
+             for(int i = 0; i < str.Length; i++)
+            {
+                int order = String.Compare(str[i-1], str[i]);
+                Console.WriteLine(order);
+            } 
+        }
+
     }
 }
