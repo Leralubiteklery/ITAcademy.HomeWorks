@@ -11,7 +11,10 @@ namespace HW._07_Task_2
             string[] stringArray = enteredString.Split(' ');
             
             SubTask1(stringArray);
-          
+            SubTask2(stringArray);
+
+            Console.ReadLine();
+
         }
 
         static void SubTask1 (string[] str)
@@ -19,13 +22,11 @@ namespace HW._07_Task_2
             int maxLength = int.MinValue;
             int index = new int();
 
-            Console.WriteLine("Final string: ");
-
             for (int i = 0; i < str.Length; i++)
             {
                 if(maxLength < str[i].Length)
                 {
-                    maxLength = (int)str[i].Length;
+                    maxLength = str[i].Length;
                     index = i;
                 }
             }
@@ -33,6 +34,32 @@ namespace HW._07_Task_2
         }
 
         static void SubTask2(string[] str)
+        {
+            int maxLength = int.MinValue;
+            int indexMax = new int();
+            int minLength = int.MaxValue;
+            int indexMin = new int();
+            
+            for(int i = 0; i < str.Length; i++)
+            {
+                if( maxLength < str[i].Length)
+                {
+                    maxLength = str[i].Length;
+                    indexMax = i;
+                }
+                else if(minLength > str[i].Length)
+                {
+                    minLength = str[i].Length;
+                    indexMin = i;
+                }
+
+                string maxWord = str[indexMax];
+                str[indexMax] = str[indexMin];
+                str[indexMin] = maxWord;
+            }
+        }
+
+        static void SubTask3(string[] str)
         {
 
         }
