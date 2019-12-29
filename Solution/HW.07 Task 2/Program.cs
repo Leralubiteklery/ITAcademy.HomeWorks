@@ -9,9 +9,10 @@ namespace HW._07_Task_2
             Console.WriteLine("Enter a string");
             string enteredString = Console.ReadLine();
             string[] stringArray = enteredString.Split(' ');
-            
-            SubTask1(stringArray);
-            SubTask2(stringArray);
+
+            //SubTask1(stringArray);
+            //SubTask2(stringArray);
+            SubTask3(stringArray);
 
             Console.ReadLine();
 
@@ -61,7 +62,9 @@ namespace HW._07_Task_2
 
         static void SubTask3(string[] str)
         {
-
+            string str2 = String.Concat<string>(str);
+            int strLength = str2.Length;
+            Console.WriteLine("String length is: " + strLength);
         }
     }
 }
