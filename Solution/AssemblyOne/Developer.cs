@@ -13,21 +13,29 @@ namespace AssemblyOne
             Console.WriteLine(Employee.companyNameProtected);
             Console.WriteLine(Employee.companyNameProtectedInternal);
             Console.WriteLine(Employee.companyNamePublic);
+            //Console.WriteLine(Employee.companyNamePrivate); cannot access private member from another class
 
             Employee employee = new Employee();
-            Employee developer = new Employee();
 
             employee.employeeNameInternal = "x";
             employee.employeeNameProtectedInternal = "x";
             employee.employeeNamePublic = "x";
-            //employee.employeeNameProtected = "x"; - ??
-            //employee.employeeNameRivateProtected = "x"; - ??
+            //employee.employeeNamePrivate = "x"; cannot access private member from another class
 
             employee.EmployeeDataInternal();
             employee.EmployeeDataProtectedInternal();
             employee.EmployeeDataPublic();
-            //Developer.EmployeeDataProtected(); - ??
-            //Employee.EmployeeDataPrivateProtected(); - ??
+            //employee.EmployeeDataPrivate(); cannot access private member from another class
+
+            static void ShowProtected()
+            {
+                Employee employee = new Employee();
+                //employee.employeeNameProtected = "x"; ??
+                //employee.employeeNameRivateProtected = "x"; ??
+
+                //employee.EmployeeDataProtected(); 
+                //employee.EmployeeDataPrivateProtected(); ??
+            }
         }
     }
 }
