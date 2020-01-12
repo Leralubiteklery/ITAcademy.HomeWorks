@@ -49,7 +49,5 @@ namespace AssemblyOne
         {
             Console.WriteLine(companyNameInternal);
         }
-
-
     }
 }
