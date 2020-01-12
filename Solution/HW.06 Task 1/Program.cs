@@ -6,7 +6,7 @@ namespace HW._06_Task_1
     {
         static void Main(string[] args)
         {
-            int [] array1 = new int[3];
+            int[] array1 = new int[3];
             Random value = new Random();
             for(int i = 0; i < array1.Length; i++)
             {
