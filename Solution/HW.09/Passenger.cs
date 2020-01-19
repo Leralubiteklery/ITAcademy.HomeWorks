@@ -14,9 +14,5 @@ namespace HW._09
             PassengerName = name;
             FlightNumber = flightNumber;
         }
-
-
-       
-
     }
 }
