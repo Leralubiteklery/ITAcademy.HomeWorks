@@ -21,7 +21,9 @@ namespace HW._09
 
             Console.WriteLine(".....................................................");
             Console.WriteLine("Thank you.You have been registered for the flight. " +
-                "\n Please, proceed to security check.");
+                "\n Please, proceed to security check." +
+                "\nPress any key to continue.");
+            Console.ReadLine();
         }
     }
 }
