@@ -21,8 +21,5 @@ namespace HW._09
             HasPassport = hasPassport;
             HasVisa = hasVisa;
         }
-
-        
-
     }
 }

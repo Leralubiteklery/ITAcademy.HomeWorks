@@ -22,6 +22,5 @@ namespace HW._09
                 Console.WriteLine("Everything is OK.");
             }
         }
-
     }
 }
