@@ -21,7 +21,7 @@ namespace HW._11
         {
             var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
             XmlConfigurator.Configure(logRepository, new FileInfo("App.config"));
-            Log.Info("test");
+            //Log.Info("test");
          }
 
         
