@@ -1,0 +1,3 @@
+2020-02-03 16:46:26,415  INFO  Starting application
+2020-02-03 16:46:26,429  INFO  Create figure
+2020-02-03 16:46:26,439  INFO  Write results to console
