@@ -8,7 +8,7 @@ namespace HW._12
         public static List<Moto> motorcycles = new List<Moto> { };
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
