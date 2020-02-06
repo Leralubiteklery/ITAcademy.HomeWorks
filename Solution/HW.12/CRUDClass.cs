@@ -12,6 +12,7 @@ namespace HW._12
         {
             Moto newMoto = new Moto();
             motoList.Add(newMoto);
+            Logger.Log.Info("Created Moto");
         }
 
         public void GetMotorcycles(List <Moto> motoList)
@@ -19,7 +20,8 @@ namespace HW._12
             foreach(var moto in motoList)
             {
                 Console.WriteLine(moto);
-            } 
+            }
+            Logger.Log.Info("Get motorcycles list");
         }
 
         public void GetMotorcycleByID(List<Moto> motolist)
@@ -34,6 +36,7 @@ namespace HW._12
                     Console.WriteLine(moto);
                 }             
             }
+            Logger.Log.Info("Get motorcycles list by ID");
         }
 
         public void UpdateMotorcycle()
@@ -41,6 +44,7 @@ namespace HW._12
             Console.WriteLine("Enter extra information about motorcycle");
             Moto newMoto = new Moto();
             newMoto.ExtraInfo = Console.ReadLine();
+            Logger.Log.Info("Motorcycle update");
         }
 
         public void DeleteMotorcycle(List<Moto> motoList)
@@ -57,6 +61,7 @@ namespace HW._12
                     Console.WriteLine("Wrong value");
                 }
             }
+            Logger.Log.Info("Motorcycle delete");
         }
     }
 }

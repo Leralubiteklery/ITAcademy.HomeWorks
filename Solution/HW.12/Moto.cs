@@ -6,12 +6,13 @@ namespace HW._12
 {
     class Moto
     {
-        CRUDClass crud = new CRUDClass();
+        
+
         public int ID { get; set; }
         public string Name { get; set; }
         public string Model { get; set; }
         public int Year { get; set; }
 
-        public string ExtraInfo { get; set; 0}
+        public string ExtraInfo { get; set;}
     }
 }
