@@ -10,12 +10,12 @@ namespace Final_project
             Console.ReadKey();
 
             Menu menu = new Menu();
-            menu.GetSushiList();
+            menu.DisplaySushiList();
 
             Console.WriteLine("Enter number of roll you'd like to order.");
 
-            Order order = new Order();
-            order.SelectItems();
+            //Order order = new Order();
+            menu.SelectItems();
         }
     }
 }
