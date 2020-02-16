@@ -12,10 +12,17 @@ namespace Final_project
             Menu menu = new Menu();
             menu.DisplaySushiList();
 
-            Console.WriteLine("Enter number of roll you'd like to order.");
+            do
+            {
+                Console.WriteLine("Enter number of roll you'd like to order.");
+                menu.SelectItems();
+                menu.ShowSelectedItems();
+                Console.WriteLine("Would you like to order anything else? Enter Yes/No");
+            }
+            while (Console.ReadLine().ToLower() == "yes");
 
-            //Order order = new Order();
-            menu.SelectItems();
+            menu.CalculatePayment();
+           
         }
     }
 }
