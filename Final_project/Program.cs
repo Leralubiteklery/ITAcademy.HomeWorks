@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Mail;
 
 namespace Final_project
 {
@@ -22,6 +23,9 @@ namespace Final_project
             while (Console.ReadLine().ToLower() == "yes");
 
             menu.CalculatePayment();
+
+            Mailer mailer = new Mailer();
+            mailer.SendMail();
            
         }
     }
