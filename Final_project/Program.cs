@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Mail;
 
 namespace Final_project
 {
@@ -10,12 +11,22 @@ namespace Final_project
             Console.ReadKey();
 
             Menu menu = new Menu();
-            menu.GetSushiList();
+            menu.DisplaySushiList();
 
-            Console.WriteLine("Enter number of roll you'd like to order.");
+            do
+            {
+                Console.WriteLine("Enter number of roll you'd like to order.");
+                menu.SelectItems();
+                menu.ShowSelectedItems();
+                Console.WriteLine("Would you like to order anything else? Enter Yes/No");
+            }
+            while (Console.ReadLine().ToLower() == "yes");
 
-            Order order = new Order();
-            order.SelectItems();
+            menu.CalculatePayment();
+
+            Mailer mailer = new Mailer();
+            mailer.SendMail();
+           
         }
     }
 }
