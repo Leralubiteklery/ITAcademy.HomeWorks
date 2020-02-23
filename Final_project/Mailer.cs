@@ -11,11 +11,11 @@ namespace Final_project
         MailAddress fromMailAddress = new MailAddress("testlera49@gmail.com", "Sushi inc.");
         MailAddress toMailAddress = new MailAddress("lerasavchenk@gmail.com");
 
-        public void SendMail()
+        public void SendMailUponOrderPlacement()
         {
             using MailMessage mailMessage = new MailMessage(fromMailAddress, toMailAddress);
             using SmtpClient smtpClient = new SmtpClient();
-            mailMessage.Subject = "Order info";
+            mailMessage.Subject = "Order status";
 
             mailMessage.Body = "Your order has been placed.";
 
@@ -24,7 +24,7 @@ namespace Final_project
             smtpClient.EnableSsl = true;
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtpClient.UseDefaultCredentials = false;
-            smtpClient.Credentials = new NetworkCredential(fromMailAddress.Address, "StickyNotes12");
+            smtpClient.Credentials = new NetworkCredential(fromMailAddress.Address, "StickyNotes12/");
 
             smtpClient.Send(mailMessage);
         }

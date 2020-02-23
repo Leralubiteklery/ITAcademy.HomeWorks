@@ -64,7 +64,9 @@ namespace Final_project
             {
                 TotalPrice += item.Price;
             }
+            Console.WriteLine($"TOTAL: {TotalPrice}\n");
             return TotalPrice;
+            
         }
     }
 }

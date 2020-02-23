@@ -23,10 +23,25 @@ namespace Final_project
             while (Console.ReadLine().ToLower() == "yes");
 
             menu.CalculatePayment();
+            
 
+
+
+            Console.WriteLine("Please, fill in the form below to checkout");
+
+            ClientInfo client = new ClientInfo();
             Mailer mailer = new Mailer();
-            mailer.SendMail();
-           
+            
+            client.UserDetailFilledIn += mailer.SendMailUponOrderPlacement;
+
+            client.GetName();
+            client.GetEmail();
+            client.GetAddress();
+
+            
+            //mailer.SendMailUponOrderPlacement();
+
+
         }
     }
 }
