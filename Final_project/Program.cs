@@ -36,9 +36,11 @@ namespace Final_project
 
             client.GetName();
             client.GetAddress();
-            client.CheckIfInfoFilledIn();
+            
 
             client.UserDetailFilledIn += mailer.SendMailUponOrderPlacement;
+
+            client.CheckIfInfoFilledIn();
 
         }
 

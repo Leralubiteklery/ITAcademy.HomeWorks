@@ -12,9 +12,10 @@ namespace Final_project
 
         public void SendMailUponOrderPlacement()
         {
+            
             Console.WriteLine("Email: ");
-            MailAddress toMailAddress = new MailAddress(Console.ReadLine()); 
-
+            MailAddress toMailAddress = new MailAddress(Console.ReadLine());
+        
             using MailMessage mailMessage = new MailMessage(fromMailAddress, toMailAddress);
             using SmtpClient smtpClient = new SmtpClient();
             mailMessage.Subject = "Order status";
@@ -27,7 +28,6 @@ namespace Final_project
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtpClient.UseDefaultCredentials = false;
             smtpClient.Credentials = new NetworkCredential(fromMailAddress.Address, "StickyNotes12/");
-
             smtpClient.Send(mailMessage);
         }
     }   
