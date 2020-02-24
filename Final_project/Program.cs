@@ -24,8 +24,12 @@ namespace Final_project
 
             menu.CalculatePayment();
 
+            
+            
+            
+            
             Mailer mailer = new Mailer();
-            mailer.SendMail();
+            mailer.SendMailUponOrderPlacement();
            
         }
     }

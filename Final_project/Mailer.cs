@@ -9,9 +9,11 @@ namespace Final_project
     class Mailer
     {
         MailAddress fromMailAddress = new MailAddress("testlera49@gmail.com", "Sushi inc.");
-        MailAddress toMailAddress = new MailAddress("lerasavchenk@gmail.com");
+        MailAddress toMailAddress = new MailAddress(Console.ReadLine());
 
-        public void SendMail()
+        //public event EventHandler OrderPlaced;
+
+        public void SendMailUponOrderPlacement()
         {
             using MailMessage mailMessage = new MailMessage(fromMailAddress, toMailAddress);
             using SmtpClient smtpClient = new SmtpClient();
@@ -24,7 +26,7 @@ namespace Final_project
             smtpClient.EnableSsl = true;
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtpClient.UseDefaultCredentials = false;
-            smtpClient.Credentials = new NetworkCredential(fromMailAddress.Address, "StickyNotes12");
+            smtpClient.Credentials = new NetworkCredential(fromMailAddress.Address, "StickyNotes12/");
 
             smtpClient.Send(mailMessage);
         }
