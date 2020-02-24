@@ -8,11 +8,14 @@ namespace Final_project
 {
     class Mailer
     {
+        ClientInfo client = new ClientInfo();
         MailAddress fromMailAddress = new MailAddress("testlera49@gmail.com", "Sushi inc.");
-        MailAddress toMailAddress = new MailAddress(Console.ReadLine());
 
         public void SendMailUponOrderPlacement()
         {
+            Console.WriteLine("Email: ");
+            MailAddress toMailAddress = new MailAddress(Console.ReadLine()); 
+
             using MailMessage mailMessage = new MailMessage(fromMailAddress, toMailAddress);
             using SmtpClient smtpClient = new SmtpClient();
             mailMessage.Subject = "Order status";

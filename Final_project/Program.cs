@@ -1,5 +1,7 @@
 ﻿using System;
-using System.Net.Mail;
+using log4net;
+using log4net.Config;
+using log4net.Repository.Hierarchy;
 
 namespace Final_project
 {
@@ -7,6 +9,9 @@ namespace Final_project
     {
         static void Main(string[] args)
         {
+            Logger.InitLogger();
+            Logger.Log.Info("Starting application");
+
             Console.WriteLine("Welcome to Sushi inc. Press any key to open menu.\n");
             Console.ReadKey();
 
@@ -24,24 +29,18 @@ namespace Final_project
 
             menu.CalculatePayment();
             
-
-
-
             Console.WriteLine("Please, fill in the form below to checkout");
 
             ClientInfo client = new ClientInfo();
             Mailer mailer = new Mailer();
-            
-            client.UserDetailFilledIn += mailer.SendMailUponOrderPlacement;
 
             client.GetName();
-            client.GetEmail();
             client.GetAddress();
+            client.CheckIfInfoFilledIn();
 
-            
-            //mailer.SendMailUponOrderPlacement();
-
+            client.UserDetailFilledIn += mailer.SendMailUponOrderPlacement;
 
         }
+
     }
 }

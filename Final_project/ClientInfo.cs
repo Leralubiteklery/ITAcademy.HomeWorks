@@ -17,13 +17,6 @@ namespace Final_project
             return Name;
         }
 
-        public string GetEmail()
-        {
-            Console.WriteLine("Email: ");
-            Email = Console.ReadLine();
-            return Email;
-        }
-
         public string GetAddress()
         {
             Console.WriteLine("Address: ");
@@ -33,19 +26,14 @@ namespace Final_project
 
         public void CheckIfInfoFilledIn()
         {
-            if (Name != null && Email != null && Address != null)
+            if (Name != null && Address != null)
             {
-                //UserDetailFilledIn?.Invoke();
-                if(UserDetailFilledIn != null)
-                {
-                    UserDetailFilledIn();
-                }
+                UserDetailFilledIn?.Invoke();
             }
             else
             {
                 Console.WriteLine("wrong data");
             }
-
         }
     }
 }
