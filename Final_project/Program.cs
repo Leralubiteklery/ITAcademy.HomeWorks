@@ -28,7 +28,9 @@ namespace Final_project
             while (Console.ReadLine().ToLower() == "yes");
 
             menu.CalculatePayment();
-            
+
+            Logger.Log.Info("Items selected");
+
             Console.WriteLine("Please, fill in the form below to checkout");
 
             ClientInfo client = new ClientInfo();
@@ -42,6 +44,8 @@ namespace Final_project
 
             client.CheckIfInfoFilledIn();
 
+            Logger.Log.Info("Finished");
+            
         }
 
     }

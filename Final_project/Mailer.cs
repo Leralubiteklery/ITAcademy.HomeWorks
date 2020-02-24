@@ -15,6 +15,7 @@ namespace Final_project
             
             Console.WriteLine("Email: ");
             MailAddress toMailAddress = new MailAddress(Console.ReadLine());
+            Console.WriteLine("Email field cannot be enpty");
         
             using MailMessage mailMessage = new MailMessage(fromMailAddress, toMailAddress);
             using SmtpClient smtpClient = new SmtpClient();
@@ -29,6 +30,7 @@ namespace Final_project
             smtpClient.UseDefaultCredentials = false;
             smtpClient.Credentials = new NetworkCredential(fromMailAddress.Address, "StickyNotes12/");
             smtpClient.Send(mailMessage);
+
         }
     }   
 }
