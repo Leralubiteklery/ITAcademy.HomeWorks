@@ -8,7 +8,6 @@ namespace Final_project
 {
     class Mailer
     {
-        ClientInfo client = new ClientInfo();
         MailAddress fromMailAddress = new MailAddress("testlera49@gmail.com", "Sushi inc.");
 
         public void SendMailUponOrderPlacement()

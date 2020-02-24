@@ -30,10 +30,6 @@ namespace Final_project
             {
                 UserDetailFilledIn?.Invoke();
             }
-            else
-            {
-                Console.WriteLine("wrong data");
-            }
         }
     }
 }
