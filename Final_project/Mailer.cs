@@ -11,13 +11,11 @@ namespace Final_project
         MailAddress fromMailAddress = new MailAddress("testlera49@gmail.com", "Sushi inc.");
         MailAddress toMailAddress = new MailAddress(Console.ReadLine());
 
-        //public event EventHandler OrderPlaced;
-
         public void SendMailUponOrderPlacement()
         {
             using MailMessage mailMessage = new MailMessage(fromMailAddress, toMailAddress);
             using SmtpClient smtpClient = new SmtpClient();
-            mailMessage.Subject = "Order info";
+            mailMessage.Subject = "Order status";
 
             mailMessage.Body = "Your order has been placed.";
 
